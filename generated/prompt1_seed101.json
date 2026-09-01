@@ -1,0 +1,40 @@
+{
+  "name": "prompt1_seed101",
+  "prompt_index": 1,
+  "emotion": "happy",
+  "genre": "pop",
+  "accompaniment": "chordal",
+  "performance": "steady detached",
+  "key": "G major",
+  "tempo": "fast",
+  "sentiment": "A bright, energetic pop tune full of joy and sunshine.",
+  "seed": 101,
+  "n_generated_tokens": 7942,
+  "ended_naturally": true,
+  "plan": [
+    [
+      "A",
+      7
+    ],
+    [
+      "B",
+      5
+    ],
+    [
+      "A",
+      8
+    ],
+    [
+      "B",
+      8
+    ],
+    [
+      "C",
+      4
+    ],
+    [
+      "D",
+      4
+    ]
+  ]
+}

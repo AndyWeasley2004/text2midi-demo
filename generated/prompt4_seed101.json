@@ -1,0 +1,40 @@
+{
+  "name": "prompt4_seed101",
+  "prompt_index": 4,
+  "emotion": "angry",
+  "genre": "classical",
+  "accompaniment": "ostinato",
+  "performance": "flexible detached",
+  "key": "D minor",
+  "tempo": "fast",
+  "sentiment": "A furious, stormy piece with relentless driving intensity.",
+  "seed": 101,
+  "n_generated_tokens": 8190,
+  "ended_naturally": false,
+  "plan": [
+    [
+      "A",
+      7
+    ],
+    [
+      "B",
+      5
+    ],
+    [
+      "A",
+      8
+    ],
+    [
+      "B",
+      8
+    ],
+    [
+      "C",
+      4
+    ],
+    [
+      "D",
+      4
+    ]
+  ]
+}

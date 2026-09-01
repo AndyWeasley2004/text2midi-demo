@@ -1,0 +1,44 @@
+{
+  "name": "prompt3_seed102",
+  "prompt_index": 3,
+  "emotion": "calm",
+  "genre": "jazz",
+  "accompaniment": "arpeggiated",
+  "performance": "steady connected",
+  "key": "F major",
+  "tempo": "moderate",
+  "sentiment": "Late-night mellow jazz, relaxed and dreamy, like city lights reflecting on water.",
+  "seed": 102,
+  "n_generated_tokens": 8190,
+  "ended_naturally": false,
+  "plan": [
+    [
+      "A",
+      7
+    ],
+    [
+      "B",
+      6
+    ],
+    [
+      "C",
+      7
+    ],
+    [
+      "A",
+      13
+    ],
+    [
+      "D",
+      8
+    ],
+    [
+      "C",
+      5
+    ],
+    [
+      "E",
+      4
+    ]
+  ]
+}

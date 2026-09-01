@@ -1,0 +1,44 @@
+{
+  "name": "prompt5_seed102",
+  "prompt_index": 5,
+  "emotion": "anxious",
+  "genre": "pop",
+  "accompaniment": "contrapuntal",
+  "performance": "flexible connected",
+  "key": "E minor",
+  "tempo": "moderate",
+  "sentiment": "Restless and uneasy, with a nervous pulse that never settles.",
+  "seed": 102,
+  "n_generated_tokens": 8190,
+  "ended_naturally": false,
+  "plan": [
+    [
+      "A",
+      7
+    ],
+    [
+      "B",
+      6
+    ],
+    [
+      "C",
+      7
+    ],
+    [
+      "A",
+      13
+    ],
+    [
+      "D",
+      8
+    ],
+    [
+      "C",
+      5
+    ],
+    [
+      "E",
+      4
+    ]
+  ]
+}

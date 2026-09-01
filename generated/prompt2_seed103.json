@@ -1,0 +1,48 @@
+{
+  "name": "prompt2_seed103",
+  "prompt_index": 2,
+  "emotion": "sad",
+  "genre": "classical",
+  "accompaniment": "sustained",
+  "performance": "flexible connected",
+  "key": "A minor",
+  "tempo": "slow",
+  "sentiment": "A mournful, tender elegy that drifts through quiet grief.",
+  "seed": 103,
+  "n_generated_tokens": 3160,
+  "ended_naturally": true,
+  "plan": [
+    [
+      "A",
+      3
+    ],
+    [
+      "B",
+      9
+    ],
+    [
+      "C",
+      5
+    ],
+    [
+      "B",
+      6
+    ],
+    [
+      "A",
+      6
+    ],
+    [
+      "B",
+      6
+    ],
+    [
+      "D",
+      5
+    ],
+    [
+      "E",
+      4
+    ]
+  ]
+}
