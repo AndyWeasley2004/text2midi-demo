@@ -74,15 +74,6 @@
       <span class="open">Open demo →</span>
     </a>
   </div>
-      <p>0.89B decoder, pretrained on piano MIDI, then weak-stage supervised fine-tuning on 371K weakly-labeled pieces.</p>
-      <ul class="meta">
-        <li><b>Resolution</b> 25 ms, 4,096-token context</li>
-        <li><b>Sentiment encoder</b> Qwen3-Embedding-4B (2560-d)</li>
-        <li><b>Sampling</b> T 0.98 · top-p 0.98</li>
-      </ul>
-      <span class="open">Open demo →</span>
-    </a>
-  </div>
 
   <h2>Earlier stages</h2>
   <div class="grid">
@@ -90,12 +81,21 @@
       <div class="card-head">
         <h3>Weak SFT — 0.89B generator</h3>
         <span class="tag legacy">earlier stage</span>
-        <a class="card" href="weak_sft_370m/">
+      </div>
+      <p>0.89B decoder, pretrained on piano MIDI, then weak-stage SFT on 371K weakly-labeled pieces.</p>
+      <ul class="meta">
+        <li><b>Resolution</b> 25 ms, 4,096-token context</li>
+        <li><b>Sentiment encoder</b> Qwen3-Embedding-4B (2560-d)</li>
+        <li><b>Sampling</b> T 0.98 · top-p 0.98</li>
+      </ul>
+      <span class="open">Open demo →</span>
+    </a>
+    <a class="card" href="weak_sft_370m/">
       <div class="card-head">
         <h3>Weak SFT — 370M prototype</h3>
         <span class="tag legacy">earlier lineage</span>
       </div>
-      <p>370M decoder, pretrained on piano MIDI, then weak-stage supervised fine-tuning (earlier lineage).</p>
+      <p>370M decoder, pretrained on piano MIDI, then weak-stage SFT (earlier lineage).</p>
       <ul class="meta">
         <li><b>Resolution</b> 10 ms, 8,192-token context</li>
         <li><b>Sentiment encoder</b> FLAN-T5-large (1024-d)</li>
