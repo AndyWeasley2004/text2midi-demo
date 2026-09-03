@@ -1,0 +1,33 @@
+{
+  "name": "prompt1_seed101",
+  "prompt_index": 1,
+  "emotion": "happy",
+  "genre": "pop",
+  "accompaniment": "chordal",
+  "performance": "steady detached",
+  "key": "G major",
+  "tempo": "fast",
+  "sentiment": "A bright, upbeat pop tune with bouncy chords and a cheerful, energetic feel, like a sunny afternoon out with friends.",
+  "seed": 101,
+  "n_generated_tokens": 4094,
+  "ended_naturally": false,
+  "plan": [
+    [
+      "A",
+      3
+    ],
+    [
+      "B",
+      6
+    ],
+    [
+      "C",
+      6
+    ],
+    [
+      "A",
+      6
+    ]
+  ],
+  "emitted_sections": "AAABBBBBBCCCCCCAAAAAAA"
+}

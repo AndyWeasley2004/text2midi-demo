@@ -60,11 +60,20 @@
 
   <h2>Current model</h2>
   <div class="grid">
-    <a class="card" href="weak_sft/">
+    <a class="card" href="middle_sft/">
       <div class="card-head">
-        <h3>Weak SFT — 0.89B generator</h3>
-        <span class="tag">final weak-SFT checkpoint</span>
+        <h3>Middle SFT — 0.89B generator</h3>
+        <span class="tag">latest checkpoint</span>
       </div>
+      <p>0.89B decoder, pretrained on piano MIDI, weak-stage SFT on 371K pieces, then middle-stage SFT on 51K annotated pieces.</p>
+      <ul class="meta">
+        <li><b>Resolution</b> 25 ms, 4,096-token context</li>
+        <li><b>Sentiment encoder</b> Qwen3-Embedding-4B (2560-d)</li>
+        <li><b>Sampling</b> T 0.98 · top-p 0.98</li>
+      </ul>
+      <span class="open">Open demo →</span>
+    </a>
+  </div>
       <p>0.89B decoder, pretrained on piano MIDI, then weak-stage supervised fine-tuning on 371K weakly-labeled pieces.</p>
       <ul class="meta">
         <li><b>Resolution</b> 25 ms, 4,096-token context</li>
@@ -75,9 +84,13 @@
     </a>
   </div>
 
-  <h2>Earlier model</h2>
+  <h2>Earlier stages</h2>
   <div class="grid">
-    <a class="card" href="weak_sft_370m/">
+    <a class="card" href="weak_sft/">
+      <div class="card-head">
+        <h3>Weak SFT — 0.89B generator</h3>
+        <span class="tag legacy">earlier stage</span>
+        <a class="card" href="weak_sft_370m/">
       <div class="card-head">
         <h3>Weak SFT — 370M prototype</h3>
         <span class="tag legacy">earlier lineage</span>

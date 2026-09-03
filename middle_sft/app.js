@@ -233,7 +233,7 @@ function buildCard(prompt, position) {
   headRow.className = "head-row";
   const tag = document.createElement("span");
   tag.className = "kind-tag";
-  tag.textContent = "midi_gen_weak_sft_v2 / final";
+  tag.textContent = "midi_gen_middle_sft_v2 / final";
   const pos = document.createElement("span");
   pos.className = "position";
   pos.textContent = `${position} / ${prompts.length}`;

@@ -1,0 +1,53 @@
+{
+  "name": "prompt2_seed102",
+  "prompt_index": 2,
+  "emotion": "sad",
+  "genre": "classical",
+  "accompaniment": "sustained",
+  "performance": "flexible connected",
+  "key": "A minor",
+  "tempo": "slow",
+  "sentiment": "A slow, mournful classical piece with long sustained chords, tender and full of quiet longing and grief.",
+  "seed": 102,
+  "n_generated_tokens": 4094,
+  "ended_naturally": false,
+  "plan": [
+    [
+      "A",
+      4
+    ],
+    [
+      "B",
+      19
+    ],
+    [
+      "C",
+      7
+    ],
+    [
+      "B",
+      4
+    ],
+    [
+      "C",
+      7
+    ],
+    [
+      "D",
+      6
+    ],
+    [
+      "E",
+      8
+    ],
+    [
+      "D",
+      6
+    ],
+    [
+      "E",
+      9
+    ]
+  ],
+  "emitted_sections": "AAAABBBBBBBBBBBBBBBBBBBCCCCCCCBBBBCCCCCCCDDDDDDEEEEEEEEEEDDDDDDDEEE"
+}
