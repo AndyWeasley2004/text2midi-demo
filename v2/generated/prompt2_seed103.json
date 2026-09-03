@@ -1,0 +1,37 @@
+{
+  "name": "prompt2_seed103",
+  "prompt_index": 2,
+  "emotion": "sad",
+  "genre": "classical",
+  "accompaniment": "sustained",
+  "performance": "flexible connected",
+  "key": "A minor",
+  "tempo": "slow",
+  "sentiment": "A lone bench faces a garden where the hydrangeas have faded to grey, rain soaking the cold stone while the empty space beside you stays stubbornly, perfectly still.",
+  "seed": 103,
+  "n_generated_tokens": 2488,
+  "ended_naturally": true,
+  "plan": [
+    [
+      "A",
+      10
+    ],
+    [
+      "B",
+      8
+    ],
+    [
+      "C",
+      5
+    ],
+    [
+      "A",
+      4
+    ],
+    [
+      "D",
+      4
+    ]
+  ],
+  "emitted_sections": "AAAAAAAAAABBBBBBBBCCCCCAAAADDDD"
+}

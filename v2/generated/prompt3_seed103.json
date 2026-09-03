@@ -1,0 +1,29 @@
+{
+  "name": "prompt3_seed103",
+  "prompt_index": 3,
+  "emotion": "calm",
+  "genre": "jazz",
+  "accompaniment": "arpeggiated",
+  "performance": "steady connected",
+  "key": "F major",
+  "tempo": "moderate",
+  "sentiment": "Golden leaves drift lazily from the maple branches, spiraling down to carpet the path as the air holds its breath between summer's warmth and autumn's cool.",
+  "seed": 103,
+  "n_generated_tokens": 4094,
+  "ended_naturally": false,
+  "plan": [
+    [
+      "A",
+      4
+    ],
+    [
+      "B",
+      18
+    ],
+    [
+      "C",
+      5
+    ]
+  ],
+  "emitted_sections": "AAAABBBBBBBBBBBBBBBBBBCCCCCCC"
+}

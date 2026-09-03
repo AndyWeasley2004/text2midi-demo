@@ -1,0 +1,33 @@
+{
+  "name": "prompt5_seed103",
+  "prompt_index": 5,
+  "emotion": "anxious",
+  "genre": "pop",
+  "accompaniment": "contrapuntal",
+  "performance": "flexible detached",
+  "key": "E minor",
+  "tempo": "moderate",
+  "sentiment": "A clock ticks louder in the empty studio as unfinished tools pile up, every loose tile threatening to shift beneath a hurried, trembling step toward a deadline slipping out of reach.",
+  "seed": 103,
+  "n_generated_tokens": 4094,
+  "ended_naturally": false,
+  "plan": [
+    [
+      "A",
+      4
+    ],
+    [
+      "B",
+      11
+    ],
+    [
+      "C",
+      5
+    ],
+    [
+      "D",
+      3
+    ]
+  ],
+  "emitted_sections": "AAAABBBBBBBBBBBCCC"
+}

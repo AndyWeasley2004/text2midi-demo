@@ -1,0 +1,29 @@
+{
+  "name": "prompt1_seed102",
+  "prompt_index": 1,
+  "emotion": "happy",
+  "genre": "pop",
+  "accompaniment": "chordal",
+  "performance": "steady detached",
+  "key": "G major",
+  "tempo": "fast",
+  "sentiment": "A wicker basket bounces down the farmhouse porch steps, spilling ripe tomatoes in a joyful, tumbling cascade while the whole kitchen shakes with bright, easy laughter.",
+  "seed": 102,
+  "n_generated_tokens": 3558,
+  "ended_naturally": true,
+  "plan": [
+    [
+      "A",
+      4
+    ],
+    [
+      "B",
+      9
+    ],
+    [
+      "A",
+      4
+    ]
+  ],
+  "emitted_sections": "AAAABBBBBBBBBAAAAAAA"
+}
