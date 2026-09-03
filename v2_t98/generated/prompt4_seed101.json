@@ -1,0 +1,33 @@
+{
+  "name": "prompt4_seed101",
+  "prompt_index": 4,
+  "emotion": "angry",
+  "genre": "classical",
+  "accompaniment": "ostinato",
+  "performance": "steady detached",
+  "key": "D minor",
+  "tempo": "fast",
+  "sentiment": "A rusted clock tower shudders as a lantern swings wildly against the gears, iron grinding on iron in furious, relentless strikes that crack the frozen air.",
+  "seed": 101,
+  "n_generated_tokens": 4094,
+  "ended_naturally": false,
+  "plan": [
+    [
+      "A",
+      6
+    ],
+    [
+      "B",
+      6
+    ],
+    [
+      "C",
+      6
+    ],
+    [
+      "A",
+      6
+    ]
+  ],
+  "emitted_sections": "AAAAAABBBBBBCCCCCAA"
+}
