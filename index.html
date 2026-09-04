@@ -73,6 +73,32 @@
       </ul>
       <span class="open">Open demo →</span>
     </a>
+    <a class="card" href="lyria_sft_bestofk/">
+      <div class="card-head">
+        <h3>Lyria SFT — best-of-8 by CLaMP3 selection</h3>
+        <span class="tag">latest checkpoint</span>
+      </div>
+      <p>0.89B generator, Lyria-SFT checkpoint; five prompts, eight samples each, top three shown ranked by the CLaMP3 selection score (text cosine + attribute-prototype cosine).</p>
+      <ul class="meta">
+        <li><b>Resolution</b> 25 ms, 4,096-token context</li>
+        <li><b>Sentiment encoder</b> Qwen3-Embedding-4B (2560-d)</li>
+        <li><b>Sampling</b> T 0.98 · top-p 0.98, best-of-8</li>
+      </ul>
+      <span class="open">Open demo →</span>
+    </a>
+    <a class="card" href="dpo_pairs/">
+      <div class="card-head">
+        <h3>DPO pair candidates — chosen vs rejected</h3>
+        <span class="tag">latest checkpoint</span>
+      </div>
+      <p>0.89B generator, Lyria-SFT checkpoint; ten held-out Lyria prompts with the largest CLaMP3 score margin, best and worst of eight side by side.</p>
+      <ul class="meta">
+        <li><b>Resolution</b> 25 ms, 4,096-token context</li>
+        <li><b>Sentiment encoder</b> Qwen3-Embedding-4B (2560-d)</li>
+        <li><b>Sampling</b> T 0.98 · top-p 0.98, best vs worst of 8</li>
+      </ul>
+      <span class="open">Open demo →</span>
+    </a>
   </div>
 
   <h2>Earlier stages</h2>

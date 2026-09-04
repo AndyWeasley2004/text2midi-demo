@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Best-of-8 — midi_gen_lyria_sft_v2</title>
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="home-link" href="../">&larr; all demos</a>
+    <div class="sidebar-title">Best-of-8 prompts</div>
+    <nav id="contents" aria-label="Prompts"></nav>
+    <div class="sidebar-foot">
+      <span class="legend-item"><i class="swatch band"></i>section span (5 s windows)</span>
+      <span class="legend-item"><i class="swatch pedal"></i>sustain pedal down (CC64)</span>
+      <span class="legend-item"><i class="swatch cursor-line"></i>playhead (click the roll to seek)</span>
+    </div>
+  </aside>
+
+  <main id="cards">
+    <header class="page-head">
+      <h1>Lyria SFT v2 — best-of-8 by CLaMP3 selection</h1>
+      <p>The selection score is the mean of the within-prompt z-scores of the
+      CLaMP 3 text cosine and the CLaMP 3 attribute-prototype (tuple) cosine, so
+      the eight candidates of one prompt are ranked against each other only.</p>
+    </header>
+  </main>
+
+  <script src="data.js?v=1"></script>
+  <script src="app.js?v=1"></script>
+</body>
+</html>
