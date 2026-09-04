@@ -1,0 +1,41 @@
+{
+  "name": "prompt5_seed102",
+  "prompt_index": 5,
+  "emotion": "anxious",
+  "genre": "pop",
+  "accompaniment": "contrapuntal",
+  "performance": "flexible detached",
+  "key": "E minor",
+  "tempo": "moderate",
+  "sentiment": "A restless, uneasy piece with nervous interweaving lines that never settle, building a growing sense of worry and tension.",
+  "seed": 102,
+  "n_generated_tokens": 3671,
+  "ended_naturally": true,
+  "plan": [
+    [
+      "A",
+      4
+    ],
+    [
+      "B",
+      5
+    ],
+    [
+      "C",
+      4
+    ],
+    [
+      "B",
+      6
+    ],
+    [
+      "D",
+      4
+    ],
+    [
+      "E",
+      4
+    ]
+  ],
+  "emitted_sections": "AAAABBBBBCCCCBBBBBBDDDDEE"
+}
