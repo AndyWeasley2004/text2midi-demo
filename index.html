@@ -73,6 +73,18 @@
       </ul>
       <span class="open">Open demo →</span>
     </a>
+    <a class="card" href="lyria_dpo_r1/">
+      <div class="card-head">
+        <h3>Lyria SFT + CLaMP-DPO round 1</h3>
+        <span class="tag">latest checkpoint</span>
+      </div>
+      <p>The Lyria-SFT checkpoint after one epoch of DPO on 1,000 CLaMP3 preference pairs (per-prompt best vs worst by sentiment + attribute-prototype score, key/tempo soft penalty on the chosen side). Same five prompts and seeds as the Lyria SFT page for a card-by-card comparison.</p>
+      <ul class="meta">
+        <li><b>DPO</b> β 0.1 · lr 5e-7 · 62 steps · reference = Lyria SFT</li>
+        <li><b>Sampling</b> T 0.98 · top-p 0.98, seeds 101–103</li>
+      </ul>
+      <span class="open">Open demo →</span>
+    </a>
     <a class="card" href="lyria_sft_bestofk/">
       <div class="card-head">
         <h3>Lyria SFT — best-of-8 by CLaMP3 selection</h3>
