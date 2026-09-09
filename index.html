@@ -73,24 +73,12 @@
       </ul>
       <span class="open">Open demo →</span>
     </a>
-    <a class="card" href="lyria_dpo_r1/">
-      <div class="card-head">
-        <h3>Lyria SFT + CLaMP-DPO round 1</h3>
-        <span class="tag">latest checkpoint</span>
-      </div>
-      <p>The Lyria-SFT checkpoint after one epoch of DPO on 1,000 CLaMP3 preference pairs (per-prompt best vs worst by sentiment + attribute-prototype score, key/tempo soft penalty on the chosen side). Same five prompts and seeds as the Lyria SFT page for a card-by-card comparison.</p>
-      <ul class="meta">
-        <li><b>DPO</b> β 0.1 · lr 5e-7 · 62 steps · reference = Lyria SFT</li>
-        <li><b>Sampling</b> T 0.98 · top-p 0.98, seeds 101–103</li>
-      </ul>
-      <span class="open">Open demo →</span>
-    </a>
-    <a class="card" href="lyria_dpo_r2/">
+        <a class="card" href="lyria_dpo_r2/">
       <div class="card-head">
         <h3>Lyria SFT + CLaMP-DPO round 2 (PQ-gated pairs)</h3>
         <span class="tag">latest checkpoint</span>
       </div>
-      <p>Round-1 recipe with one change: the rejected piece of every pair must have lower Audiobox production quality than the chosen one (702 pairs from the same candidates). Same five prompts and seeds as the SFT and round-1 pages.</p>
+      <p>One epoch of DPO on 702 CLaMP3 preference pairs (per-prompt best vs worst by sentiment + attribute-prototype score, key/tempo soft penalty on the chosen side, and the rejected piece must have lower Audiobox production quality than the chosen one). Same five prompts and seeds as the Lyria SFT page for a card-by-card comparison.</p>
       <ul class="meta">
         <li><b>DPO</b> β 0.1 · lr 5e-7 · 43 steps · reference = Lyria SFT</li>
         <li><b>Sampling</b> T 0.98 · top-p 0.98, seeds 101–103</li>
@@ -110,19 +98,7 @@
       </ul>
       <span class="open">Open demo →</span>
     </a>
-    <a class="card" href="judge_check/">
-      <div class="card-head">
-        <h3>Judge check — accompaniment &amp; performance read-back</h3>
-        <span class="tag">evaluation</span>
-      </div>
-      <p>The best-of-8 demo pieces with what four attribute judges (CLaMP 3; CLaMP 3 + Aria; symbolic descriptors; all three) read back for accompaniment texture and performance style, next to the prompt. A listening check of which judge to trust for those two fields.</p>
-      <ul class="meta">
-        <li><b>Judges</b> logistic regression on frozen features, fitted on 9,849 Lyria-train pieces</li>
-        <li><b>Pieces</b> 5 prompts × top-3 of 8, Lyria-SFT checkpoint</li>
-      </ul>
-      <span class="open">Open demo →</span>
-    </a>
-    <a class="card" href="dpo_pairs/">
+        <a class="card" href="dpo_pairs/">
       <div class="card-head">
         <h3>DPO pair candidates — chosen vs rejected</h3>
         <span class="tag">latest checkpoint</span>
@@ -165,20 +141,7 @@
       </ul>
       <span class="open">Open demo →</span>
     </a>
-    <a class="card" href="weak_sft_370m/">
-      <div class="card-head">
-        <h3>Weak SFT — 370M prototype</h3>
-        <span class="tag legacy">earlier lineage</span>
       </div>
-      <p>370M decoder, pretrained on piano MIDI, then weak-stage SFT (earlier lineage).</p>
-      <ul class="meta">
-        <li><b>Resolution</b> 10 ms, 8,192-token context</li>
-        <li><b>Sentiment encoder</b> FLAN-T5-large (1024-d)</li>
-        <li><b>Sampling</b> T 0.98 · top-p 0.98</li>
-      </ul>
-      <span class="open">Open demo →</span>
-    </a>
-  </div>
 </main>
 </body>
 </html>
