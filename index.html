@@ -142,6 +142,23 @@
       <span class="open">Open demo →</span>
     </a>
       </div>
+
+  <h2>Latent tokenizer</h2>
+  <div class="grid">
+    <a class="card" href="vae_recon/">
+      <div class="card-head">
+        <h3>Window VAE reconstruction — 12 pieces, 4 per stage</h3>
+        <span class="tag">latent tokenizer check</span>
+      </div>
+      <p>The collaborator's MuseTok-style window VAE (one 128-d latent per second, 12-layer encoder/decoder) that the planned latent DiT will generate into. Each card plays a piece's original token stream next to its reconstruction from the latents, decoded free-running per 20 s chunk with a token-grammar mask; note F1 0.94 against the original at ±50 ms, velocity 99.6 % and duration 99.3 % agreement.</p>
+      <ul class="meta">
+        <li><b>Latent</b> 1 per second, 128-d</li>
+        <li><b>Pieces</b> 4 weak · 4 middle · 4 Lyria at note-density quantiles</li>
+        <li><b>Decoding</b> constrained greedy, chunked 20 s</li>
+      </ul>
+      <span class="open">Open demo →</span>
+    </a>
+  </div>
 </main>
 </body>
 </html>

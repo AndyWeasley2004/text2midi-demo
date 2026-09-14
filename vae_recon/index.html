@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Window VAE reconstruction — 12 pieces, 4 per stage</title>
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-title">Pieces by stage, then density</div>
+    <nav class="pages" aria-label="Pages"><a href="../">All demos</a> · <a href="../lyria_sft/">Lyria SFT — 0.89B (current)</a> · <a href="../middle_sft/">Middle SFT — 0.89B</a> · <a href="../weak_sft/">Weak SFT — 0.89B</a> · <b>VAE reconstruction</b></nav>
+    <nav id="contents" aria-label="Pieces"></nav>
+    <div class="sidebar-foot">
+      <span class="legend-item"><i class="swatch pedal"></i>sustain pedal down (CC64)</span>
+      <span class="legend-item"><i class="swatch cursor-line"></i>playhead (click the roll to seek)</span>
+    </div>
+  </aside>
+
+  <main id="cards">
+    <header class="page-head">
+      <h1>Window VAE reconstruction — 12 pieces, 4 per stage</h1>
+      <p>Checkpoint step_100000, 1 latent per second (128-d). The decoder is run
+      free-running per 20 s chunk under a token-grammar mask, so nothing but the
+      latents carries the content. Left is the piece's token stream rendered back
+      to MIDI, right is the decode of its latents; note matching is ±50 ms.</p>
+    </header>
+  </main>
+
+  <script src="data.js?v=1"></script>
+  <script src="app.js?v=1"></script>
+</body>
+</html>
