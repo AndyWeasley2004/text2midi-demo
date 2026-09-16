@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Latent DiT — weak stage, conditional samples</title>
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-title">DiT cond prompts</div>
+    <nav class="pages" aria-label="Pages"><a href="../">All demos</a> · <a href="../lyria_sft/">Lyria SFT — 0.89B (current)</a> · <a href="../middle_sft/">Middle SFT — 0.89B</a> · <a href="../weak_sft/">Weak SFT — 0.89B</a> · <b>Latent DiT — weak stage</b> · <a href="../vae_recon/">VAE reconstruction</a></nav>
+    <nav id="contents" aria-label="Prompts"></nav>
+    <div class="sidebar-foot">
+      <span class="legend-item"><i class="swatch band"></i>section span (5 s windows)</span>
+      <span class="legend-item"><i class="swatch pedal"></i>sustain pedal down (CC64)</span>
+      <span class="legend-item"><i class="swatch cursor-line"></i>playhead (click the roll to seek)</span>
+    </div>
+  </aside>
+
+  <main id="cards">
+    <section class="page-note">
+      <h2>Latent DiT — weak stage, conditional samples</h2>
+      <p>
+        The 397.2M-parameter latent DiT trained for 120K steps on the weak corpus in
+        the window-VAE latent space (one 128-d latent per second, rectified flow, 192 s
+        canvas), sampled from <code>dit_weak_v1/final</code> EMA weights with
+        classifier-free guidance 3.0 and 50 Euler steps, seeds 101&ndash;103, and decoded
+        through the grammar-constrained decoder <code>inference/latent_decode.py</code>.
+      </p>
+      <p>
+        The prompts are identical to the AR middle/Lyria demos &mdash; the same five
+        attribute/key/tempo prompts and the same plainer sentiment sentences. Unlike the
+        AR model, the DiT takes the section plan and the piece length as a
+        <em>time-aligned input</em> rather than generating them, so each prompt borrows
+        its plan and length from a Lyria validation piece with the same emotion and
+        genre: happy pop &larr; <code>sample_001071</code> (105 s, A B C B); sad classical
+        &larr; <code>sample_000018</code> (160 s, A B C D E); calm jazz &larr;
+        <code>sample_001082</code> (150 s, A B C D C E); angry classical &larr;
+        <code>sample_005379</code> (150 s, A B C B D); anxious pop &larr;
+        <code>sample_005294</code> (130 s, A B C D). The plan is drawn only inside the
+        roll, as translucent colored spans carrying the section letter.
+      </p>
+    </section>
+  </main>
+
+  <script src="data.js?v=1"></script>
+  <script src="app.js?v=1"></script>
+</body>
+</html>

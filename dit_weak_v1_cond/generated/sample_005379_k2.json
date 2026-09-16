@@ -1,0 +1,40 @@
+{
+  "name": "sample_005379_k2",
+  "prompt_index": 4,
+  "emotion": "angry",
+  "genre": "classical",
+  "accompaniment": "ostinato",
+  "performance": "steady detached",
+  "key": "D minor",
+  "tempo": "fast",
+  "sentiment": "A fierce, stormy classical piece driven by a relentless pounding ostinato, tense and full of furious energy.",
+  "seed": 103,
+  "plan": [
+    [
+      "A",
+      3
+    ],
+    [
+      "B",
+      7
+    ],
+    [
+      "C",
+      7
+    ],
+    [
+      "B",
+      6
+    ],
+    [
+      "D",
+      7
+    ]
+  ],
+  "n_windows": 30,
+  "complete": true,
+  "cfg": 3.0,
+  "steps": 50,
+  "n_generated_tokens": 3874,
+  "ended_naturally": true
+}
