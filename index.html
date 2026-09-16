@@ -145,6 +145,19 @@
       </ul>
       <span class="open">Open demo →</span>
     </a>
+    <a class="card" href="dit_weak_v1_cond_cfg1/">
+      <div class="card-head">
+        <h3>Latent DiT — weak stage, no classifier-free guidance</h3>
+        <span class="tag">latent DiT</span>
+      </div>
+      <p>The same 15 prompt×seed rows as the page above — identical prompts, section plans, lengths, seeds and checkpoint — resampled with classifier-free guidance disabled (cfg 1.0), as an A/B listening comparison of what guidance contributes at the weak stage.</p>
+      <ul class="meta">
+        <li><b>Latent</b> 1 per second, 128-d · 192 s canvas</li>
+        <li><b>Sentiment encoder</b> Qwen3-Embedding-4B (2560-d), cross-attention</li>
+        <li><b>Sampling</b> EMA weights · guidance off (cfg 1.0) · 50 Euler steps, seeds 101–103</li>
+      </ul>
+      <span class="open">Open demo →</span>
+    </a>
   </div>
 
   <h2>Latent tokenizer</h2>

@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Latent DiT — weak stage, conditional samples</title>
+  <title>Latent DiT — weak stage, conditional samples, no CFG</title>
   <link rel="stylesheet" href="styles.css?v=1">
 </head>
 <body>
   <aside class="sidebar">
     <div class="sidebar-title">DiT cond prompts</div>
-    <nav class="pages" aria-label="Pages"><a href="../">All demos</a> · <a href="../lyria_sft/">Lyria SFT — 0.89B (current)</a> · <a href="../middle_sft/">Middle SFT — 0.89B</a> · <a href="../weak_sft/">Weak SFT — 0.89B</a> · <b>Latent DiT — weak stage</b> · <a href="../dit_weak_v1_cond_cfg1/">Latent DiT — weak, no CFG</a> · <a href="../vae_recon/">VAE reconstruction</a></nav>
+    <nav class="pages" aria-label="Pages"><a href="../">All demos</a> · <a href="../lyria_sft/">Lyria SFT — 0.89B (current)</a> · <a href="../middle_sft/">Middle SFT — 0.89B</a> · <a href="../weak_sft/">Weak SFT — 0.89B</a> · <a href="../dit_weak_v1_cond/">Latent DiT — weak stage</a> · <b>Latent DiT — weak, no CFG</b> · <a href="../vae_recon/">VAE reconstruction</a></nav>
     <nav id="contents" aria-label="Prompts"></nav>
     <div class="sidebar-foot">
       <span class="legend-item"><i class="swatch band"></i>section span (5 s windows)</span>
@@ -20,16 +20,21 @@
 
   <main id="cards">
     <section class="page-note">
-      <h2>Latent DiT — weak stage, conditional samples</h2>
+      <h2>Latent DiT — weak stage, conditional samples, no CFG</h2>
       <p>
         The 397.2M-parameter latent DiT trained for 120K steps on the weak corpus in
         the window-VAE latent space (one 128-d latent per second, rectified flow, 192 s
         canvas), sampled from <code>dit_weak_v1/final</code> EMA weights with
-        classifier-free guidance 3.0 and 50 Euler steps, seeds 101&ndash;103, and decoded
-        through the grammar-constrained decoder <code>inference/latent_decode.py</code>.
-        The same 15 prompt&times;seed rows resampled with guidance off are on the
-        <a href="../dit_weak_v1_cond_cfg1/">no-CFG page</a>, for an A/B listening
-        comparison.
+        <strong>classifier-free guidance disabled</strong> (cfg 1.0) and 50 Euler steps,
+        seeds 101&ndash;103, and decoded through the grammar-constrained decoder
+        <code>inference/latent_decode.py</code>.
+      </p>
+      <p>
+        These are the <strong>same 15 prompt&times;seed rows</strong> as the
+        <a href="../dit_weak_v1_cond/">cfg 3.0 page</a> &mdash; identical prompts, section
+        plans, lengths, seeds and checkpoint &mdash; resampled with guidance off, so the two
+        pages are an A/B listening comparison of what classifier-free guidance does at this
+        stage.
       </p>
       <p>
         The prompts are identical to the AR middle/Lyria demos &mdash; the same five
