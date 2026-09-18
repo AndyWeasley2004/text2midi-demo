@@ -1,0 +1,35 @@
+{
+  "name": "009495_0_k0",
+  "source_piece": "009495_0",
+  "seed": 102,
+  "key": "G minor",
+  "tempo": "moderate",
+  "plan": [
+    [
+      "A",
+      6
+    ],
+    [
+      "B",
+      7
+    ],
+    [
+      "C",
+      6
+    ],
+    [
+      "B",
+      7
+    ],
+    [
+      "A",
+      4
+    ]
+  ],
+  "n_windows": 30,
+  "n_seconds": 150,
+  "complete": true,
+  "cfg": 1.0,
+  "steps": 50,
+  "n_generated_tokens": 2334
+}

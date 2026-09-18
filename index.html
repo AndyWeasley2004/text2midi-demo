@@ -162,6 +162,19 @@
 
   <h2>Latent tokenizer</h2>
   <div class="grid">
+    <a class="card" href="dit_pretrain_v1_uncond/">
+      <div class="card-head">
+        <h3>Latent DiT — pretrain stage on the v2 latent store</h3>
+        <span class="tag">latent DiT</span>
+      </div>
+      <p>Six samples from the finished pretrain stage (397.6M, 120K steps, global batch 384) on the new latent store with two 128-d latents per second (0.5 s hop). The pretrain stage is conditioned only on key, tempo, section plan and length, so each sample borrows those from a pretrain validation piece; attributes and sentiment are null. Decoded with parity selection (each second's first half from its own window).</p>
+      <ul class="meta">
+        <li><b>Latent</b> 2 per second, 128-d · 192 s canvas</li>
+        <li><b>Conditioning</b> key · tempo · section plan · length (no attributes, no text)</li>
+        <li><b>Sampling</b> EMA weights · no guidance · 50 Euler steps, seeds 101–106</li>
+      </ul>
+      <span class="open">Open demo →</span>
+    </a>
     <a class="card" href="vae_recon/">
       <div class="card-head">
         <h3>Window VAE reconstruction — 12 pieces, 4 per stage</h3>

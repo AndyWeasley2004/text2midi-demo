@@ -1,0 +1,23 @@
+{
+  "name": "021106_0_k0",
+  "source_piece": "021106_0",
+  "seed": 104,
+  "key": "Db major",
+  "tempo": "fast",
+  "plan": [
+    [
+      "A",
+      14
+    ],
+    [
+      "B",
+      6
+    ]
+  ],
+  "n_windows": 20,
+  "n_seconds": 100,
+  "complete": true,
+  "cfg": 1.0,
+  "steps": 50,
+  "n_generated_tokens": 873
+}

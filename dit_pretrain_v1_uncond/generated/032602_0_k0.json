@@ -1,0 +1,31 @@
+{
+  "name": "032602_0_k0",
+  "source_piece": "032602_0",
+  "seed": 106,
+  "key": "A minor",
+  "tempo": "fast",
+  "plan": [
+    [
+      "A",
+      13
+    ],
+    [
+      "B",
+      4
+    ],
+    [
+      "A",
+      8
+    ],
+    [
+      "C",
+      3
+    ]
+  ],
+  "n_windows": 28,
+  "n_seconds": 140,
+  "complete": true,
+  "cfg": 1.0,
+  "steps": 50,
+  "n_generated_tokens": 2693
+}

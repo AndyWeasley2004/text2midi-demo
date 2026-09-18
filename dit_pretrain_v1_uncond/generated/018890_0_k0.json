@@ -1,0 +1,39 @@
+{
+  "name": "018890_0_k0",
+  "source_piece": "018890_0",
+  "seed": 103,
+  "key": "D major",
+  "tempo": "moderate",
+  "plan": [
+    [
+      "A",
+      4
+    ],
+    [
+      "B",
+      4
+    ],
+    [
+      "A",
+      5
+    ],
+    [
+      "B",
+      4
+    ],
+    [
+      "C",
+      6
+    ],
+    [
+      "D",
+      5
+    ]
+  ],
+  "n_windows": 28,
+  "n_seconds": 140,
+  "complete": true,
+  "cfg": 1.0,
+  "steps": 50,
+  "n_generated_tokens": 2474
+}

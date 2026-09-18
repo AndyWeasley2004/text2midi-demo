@@ -1,0 +1,35 @@
+{
+  "name": "025867_0_k0",
+  "source_piece": "025867_0",
+  "seed": 105,
+  "key": "C major",
+  "tempo": "slow",
+  "plan": [
+    [
+      "A",
+      6
+    ],
+    [
+      "B",
+      7
+    ],
+    [
+      "A",
+      4
+    ],
+    [
+      "B",
+      4
+    ],
+    [
+      "C",
+      6
+    ]
+  ],
+  "n_windows": 27,
+  "n_seconds": 135,
+  "complete": true,
+  "cfg": 1.0,
+  "steps": 50,
+  "n_generated_tokens": 1588
+}

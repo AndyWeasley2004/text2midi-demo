@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Latent DiT — pretrain stage, samples from dit_pretrain_v1/final</title>
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-title">DiT pretrain samples</div>
+    <nav class="pages" aria-label="Pages"><a href="../">All demos</a> · <a href="../lyria_sft/">Lyria SFT — 0.89B (current)</a> · <a href="../middle_sft/">Middle SFT — 0.89B</a> · <a href="../weak_sft/">Weak SFT — 0.89B</a> · <a href="../dit_weak_v1_cond/">Latent DiT — weak stage</a> · <a href="../dit_weak_v1_cond_cfg1/">Latent DiT — weak, no CFG</a> · <b>Latent DiT — pretrain, v2 latents</b> · <a href="../vae_recon/">VAE reconstruction</a></nav>
+    <nav id="contents" aria-label="Samples"></nav>
+    <div class="sidebar-foot">
+      <span class="legend-item"><i class="swatch band"></i>section span (5 s windows)</span>
+      <span class="legend-item"><i class="swatch pedal"></i>sustain pedal down (CC64)</span>
+      <span class="legend-item"><i class="swatch cursor-line"></i>playhead (click the roll to seek)</span>
+    </div>
+  </aside>
+
+  <main id="cards">
+    <section class="page-note">
+      <h2>Latent DiT &mdash; pretrain stage, samples from <code>dit_pretrain_v1/final</code></h2>
+      <p>
+        The 397.6M-parameter latent DiT trained for 120K steps (global batch 384) on the
+        pretrain corpus in the window-VAE latent space of the v2 latent store (0.5 s hop,
+        two 128-d latents per second, rectified flow, 192 s canvas), sampled from the
+        <code>final</code> EMA weights with 50 Euler steps and no classifier-free
+        guidance, and decoded parity-selected through the grammar-constrained decoder
+        <code>inference/latent_decode.py</code>.
+      </p>
+      <p>
+        The pretrain stage is conditioned on the global fields &mdash; key, tempo class,
+        section plan, completeness &mdash; with null attributes and an empty sentiment
+        context, so each sample borrows its key, tempo class, section plan and length
+        from a pretrain-validation piece and only the content is sampled. The plan is
+        drawn only inside the roll, as translucent colored spans carrying the section
+        letter.
+      </p>
+    </section>
+  </main>
+
+  <script src="data.js?v=1"></script>
+  <script src="app.js?v=1"></script>
+</body>
+</html>
