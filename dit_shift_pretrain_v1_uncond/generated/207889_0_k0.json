@@ -1,0 +1,40 @@
+{
+  "name": "207889_0_k0",
+  "prompt_index": 2,
+  "emotion": null,
+  "genre": null,
+  "accompaniment": null,
+  "performance": null,
+  "key": "B minor",
+  "tempo": "slow",
+  "sentiment": null,
+  "seed": 101,
+  "plan": [
+    [
+      "A",
+      3
+    ],
+    [
+      "B",
+      7
+    ],
+    [
+      "A",
+      7
+    ],
+    [
+      "B",
+      5
+    ],
+    [
+      "C",
+      8
+    ]
+  ],
+  "n_windows": 30,
+  "complete": true,
+  "cfg": 3.0,
+  "steps": 50,
+  "n_generated_tokens": 1979,
+  "ended_naturally": true
+}

@@ -1,0 +1,32 @@
+{
+  "name": "372179_6_k0",
+  "prompt_index": 3,
+  "emotion": null,
+  "genre": null,
+  "accompaniment": null,
+  "performance": null,
+  "key": "F# major",
+  "tempo": "moderate",
+  "sentiment": null,
+  "seed": 101,
+  "plan": [
+    [
+      "A",
+      6
+    ],
+    [
+      "B",
+      8
+    ],
+    [
+      "A",
+      8
+    ]
+  ],
+  "n_windows": 22,
+  "complete": true,
+  "cfg": 3.0,
+  "steps": 50,
+  "n_generated_tokens": 1719,
+  "ended_naturally": true
+}

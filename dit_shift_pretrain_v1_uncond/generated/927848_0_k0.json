@@ -1,0 +1,40 @@
+{
+  "name": "927848_0_k0",
+  "prompt_index": 6,
+  "emotion": null,
+  "genre": null,
+  "accompaniment": null,
+  "performance": null,
+  "key": "Eb major",
+  "tempo": "slow",
+  "sentiment": null,
+  "seed": 101,
+  "plan": [
+    [
+      "A",
+      5
+    ],
+    [
+      "B",
+      4
+    ],
+    [
+      "A",
+      10
+    ],
+    [
+      "C",
+      4
+    ],
+    [
+      "B",
+      3
+    ]
+  ],
+  "n_windows": 26,
+  "complete": true,
+  "cfg": 3.0,
+  "steps": 50,
+  "n_generated_tokens": 1854,
+  "ended_naturally": true
+}

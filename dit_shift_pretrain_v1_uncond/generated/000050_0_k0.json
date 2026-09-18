@@ -1,0 +1,32 @@
+{
+  "name": "000050_0_k0",
+  "prompt_index": 1,
+  "emotion": null,
+  "genre": null,
+  "accompaniment": null,
+  "performance": null,
+  "key": "Db major",
+  "tempo": "moderate",
+  "sentiment": null,
+  "seed": 101,
+  "plan": [
+    [
+      "A",
+      3
+    ],
+    [
+      "B",
+      9
+    ],
+    [
+      "C",
+      5
+    ]
+  ],
+  "n_windows": 17,
+  "complete": true,
+  "cfg": 3.0,
+  "steps": 50,
+  "n_generated_tokens": 1641,
+  "ended_naturally": true
+}
