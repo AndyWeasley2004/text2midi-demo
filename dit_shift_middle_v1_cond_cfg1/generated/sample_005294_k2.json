@@ -1,0 +1,36 @@
+{
+  "name": "sample_005294_k2",
+  "prompt_index": 5,
+  "emotion": "anxious",
+  "genre": "pop",
+  "accompaniment": "contrapuntal",
+  "performance": "flexible detached",
+  "key": "E minor",
+  "tempo": "moderate",
+  "sentiment": "A restless, uneasy piece with nervous interweaving lines that never settle, building a growing sense of worry and tension.",
+  "seed": 103,
+  "plan": [
+    [
+      "A",
+      5
+    ],
+    [
+      "B",
+      8
+    ],
+    [
+      "C",
+      10
+    ],
+    [
+      "D",
+      3
+    ]
+  ],
+  "n_windows": 26,
+  "complete": true,
+  "cfg": 1.0,
+  "steps": 50,
+  "n_generated_tokens": 3094,
+  "ended_naturally": true
+}
