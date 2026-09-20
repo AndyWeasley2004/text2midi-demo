@@ -1,0 +1,44 @@
+{
+  "name": "sample_001082_k1",
+  "prompt_index": 3,
+  "emotion": "calm",
+  "genre": "jazz",
+  "accompaniment": "arpeggiated",
+  "performance": "steady connected",
+  "key": "F major",
+  "tempo": "moderate",
+  "sentiment": "A relaxed late-night jazz ballad with gentle flowing arpeggios, smooth and peaceful, like soft lights in a quiet club.",
+  "seed": 102,
+  "plan": [
+    [
+      "A",
+      5
+    ],
+    [
+      "B",
+      5
+    ],
+    [
+      "C",
+      6
+    ],
+    [
+      "D",
+      5
+    ],
+    [
+      "C",
+      5
+    ],
+    [
+      "E",
+      4
+    ]
+  ],
+  "n_windows": 30,
+  "complete": true,
+  "cfg": 1.0,
+  "steps": 50,
+  "n_generated_tokens": 2564,
+  "ended_naturally": true
+}

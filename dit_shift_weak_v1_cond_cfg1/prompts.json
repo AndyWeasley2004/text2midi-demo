@@ -1,0 +1,12 @@
+[
+  {"name": "sample_001071", "emotion": "happy", "genre": "pop", "accompaniment": "chordal", "performance": "steady detached", "key": "G major", "tempo": "fast",
+   "sentiment": "A bright, upbeat pop tune with bouncy chords and a cheerful, energetic feel, like a sunny afternoon out with friends."},
+  {"name": "sample_000018", "emotion": "sad", "genre": "classical", "accompaniment": "sustained", "performance": "flexible connected", "key": "A minor", "tempo": "slow",
+   "sentiment": "A slow, mournful classical piece with long sustained chords, tender and full of quiet longing and grief."},
+  {"name": "sample_001082", "emotion": "calm", "genre": "jazz", "accompaniment": "arpeggiated", "performance": "steady connected", "key": "F major", "tempo": "moderate",
+   "sentiment": "A relaxed late-night jazz ballad with gentle flowing arpeggios, smooth and peaceful, like soft lights in a quiet club."},
+  {"name": "sample_005379", "emotion": "angry", "genre": "classical", "accompaniment": "ostinato", "performance": "steady detached", "key": "D minor", "tempo": "fast",
+   "sentiment": "A fierce, stormy classical piece driven by a relentless pounding ostinato, tense and full of furious energy."},
+  {"name": "sample_005294", "emotion": "anxious", "genre": "pop", "accompaniment": "contrapuntal", "performance": "flexible detached", "key": "E minor", "tempo": "moderate",
+   "sentiment": "A restless, uneasy piece with nervous interweaving lines that never settle, building a growing sense of worry and tension."}
+]
