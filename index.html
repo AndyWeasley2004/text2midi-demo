@@ -158,6 +158,19 @@
       </ul>
       <span class="open">Open demo →</span>
     </a>
+    <a class="card" href="dit_shift_weak_v1_cond/">
+      <div class="card-head">
+        <h3>Latent DiT — weak stage, shifted noise schedule (v2 latents)</h3>
+        <span class="tag">latent DiT</span>
+      </div>
+      <p>The same five prompts and three seeds as the weak-stage page above, sampled from the weak stage of the shifted-schedule arm: pretrained and fine-tuned on the v2 latent store (two 128-d latents per second) with a logit-normal noise schedule shifted toward the low-noise end, three data passes in thirds with the unaugmented pass last, 120K weak steps. Section plans and lengths borrowed from the same Lyria validation pieces.</p>
+      <ul class="meta">
+        <li><b>Latent</b> 2 per second, 128-d · 192 s canvas</li>
+        <li><b>Sentiment encoder</b> Qwen3-Embedding-4B (2560-d), cross-attention</li>
+        <li><b>Sampling</b> EMA weights · CFG 3.0 · 50 Euler steps, seeds 101–103</li>
+      </ul>
+      <span class="open">Open demo →</span>
+    </a>
   </div>
 
   <h2>Latent tokenizer</h2>
