@@ -184,6 +184,19 @@
       </ul>
       <span class="open">Open demo →</span>
     </a>
+    <a class="card" href="dit_shift_lyria_v1_cond/">
+      <div class="card-head">
+        <h3>Latent DiT — Lyria stage, shifted noise schedule, cfg 3.0 vs no guidance</h3>
+        <span class="tag">latent DiT</span>
+      </div>
+      <p>The same five prompts and three seeds as the pages above, sampled from the Lyria stage of the shifted-schedule arm (9K steps on the ~10K Lyria corpus in three passes with the unaugmented pass last, initialised from the middle stage). Each card carries six tabs: the three seeds at classifier-free guidance 3.0 and the same three seeds with guidance off (cfg 1.0), for a like-for-like comparison.</p>
+      <ul class="meta">
+        <li><b>Latent</b> 2 per second, 128-d · 192 s canvas</li>
+        <li><b>Sentiment encoder</b> Qwen3-Embedding-4B (2560-d), cross-attention</li>
+        <li><b>Sampling</b> EMA weights · CFG 3.0 and 1.0 · 50 Euler steps, seeds 101–103</li>
+      </ul>
+      <span class="open">Open demo →</span>
+    </a>
   </div>
 
   <h2>Latent tokenizer</h2>

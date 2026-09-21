@@ -1,0 +1,36 @@
+{
+  "name": "sample_001071_k1",
+  "prompt_index": 1,
+  "emotion": "happy",
+  "genre": "pop",
+  "accompaniment": "chordal",
+  "performance": "steady detached",
+  "key": "G major",
+  "tempo": "fast",
+  "sentiment": "A bright, upbeat pop tune with bouncy chords and a cheerful, energetic feel, like a sunny afternoon out with friends.",
+  "seed": 102,
+  "plan": [
+    [
+      "A",
+      4
+    ],
+    [
+      "B",
+      5
+    ],
+    [
+      "C",
+      6
+    ],
+    [
+      "B",
+      6
+    ]
+  ],
+  "n_windows": 21,
+  "complete": false,
+  "cfg": 3.0,
+  "steps": 50,
+  "n_generated_tokens": 3431,
+  "ended_naturally": false
+}
