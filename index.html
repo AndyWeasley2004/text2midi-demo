@@ -73,6 +73,18 @@
       </ul>
       <span class="open">Open demo →</span>
     </a>
+    <a class="card" href="lyria_sft_cfg3/">
+      <div class="card-head">
+        <h3>Lyria SFT — classifier-free guidance 3.0</h3>
+        <span class="tag">latest checkpoint</span>
+      </div>
+      <p>Same checkpoint, prompts and seeds as the Lyria SFT page, sampled with logit-space classifier-free guidance (w = 3.0) against the null tags + null imagery branch the model saw during training. For inspecting condition following; guidance also moves the sampled section plan.</p>
+      <ul class="meta">
+        <li><b>Guidance</b> u + 3.0 (c − u), grammar mask after guidance</li>
+        <li><b>Sampling</b> T 0.98 · top-p 0.98, seeds 101–103</li>
+      </ul>
+      <span class="open">Open demo →</span>
+    </a>
         <a class="card" href="lyria_dpo_r2/">
       <div class="card-head">
         <h3>Lyria SFT + CLaMP-DPO round 2 (PQ-gated pairs)</h3>
