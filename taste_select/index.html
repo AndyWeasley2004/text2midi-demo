@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TASTE seed selection</title>
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+  <main id="prompts">
+    <header class="page-head">
+      <h1>TASTE seed selection</h1>
+      <p>8 prompts &times; 4 systems &times; 8 seeds (k0&ndash;k7), full length, 48 kbps mono.
+        Pick one seed per row. Picks are saved in this browser (localStorage).
+        Click a tile to open its roll, &#9654; to play; click the roll to seek.</p>
+    </header>
+  </main>
+
+  <footer class="picks-bar">
+    <span id="pick-count">0/32 picked</span>
+    <button type="button" id="copy-picks">Copy picks JSON</button>
+    <span id="copy-status"></span>
+    <textarea id="picks-json" readonly rows="2" aria-label="Picks JSON"></textarea>
+  </footer>
+
+  <script src="data.js?v=1"></script>
+  <script src="app.js?v=1"></script>
+</body>
+</html>
