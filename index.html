@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Text2MIDI demos</title>
+  <title>TASTE demos</title>
   <style>
     :root {
       color-scheme: light;
@@ -50,77 +50,38 @@
 <body>
 <main>
   <div class="eyebrow">Listening demos</div>
-  <h1>Text2MIDI: controllable piano generation</h1>
+  <h1>TASTE: taxonomy-aware symbolic piano generation from text</h1>
   <p class="lede">
-    Autoregressive piano generators trained from scratch on MIDI tokens, then fine-tuned to
-    follow text and attribute controls. Each page below is one model checkpoint: five
-    hand-written prompts, three random seeds each, rendered to audio with a synced
-    piano-roll so you can hear and see how the music follows the prompt.
+    Piano generators trained on MIDI tokens with a three-tier corpus (large public → curated →
+    high-quality) and conditioned on taxonomy attributes, key, tempo, section plan and free-text
+    imagery. Each page is one checkpoint: five hand-written prompts, three random seeds each,
+    rendered to audio with a synced piano-roll.
   </p>
 
-  <h2>Project page selection</h2>
+  <h2>TASTE (AR)</h2>
   <div class="grid">
-    <a class="card" href="taste_select/">
+    <a class="card" href="ar_high_quality/">
       <div class="card-head">
-        <h3>TASTE demo — pick one of 8 seeds</h3>
-        <span class="tag">selection</span>
+        <h3>TASTE (AR) — high-quality stage</h3>
+        <span class="tag">final checkpoint</span>
       </div>
-      <p>Seven hand-written prompts; AR (Lyria SFT), DiT (Lyria stage, cfg 3.0), text2midi and MIDI-LLM, eight seeds each. Pick one per prompt and system, then copy the picks JSON.</p>
-      <ul class="meta">
-        <li><b>Audio</b> 48 kbps mono, full length</li>
-      </ul>
-      <span class="open">Open page →</span>
-    </a>
-  </div>
-
-  <h2>Current model</h2>
-  <div class="grid">
-    <a class="card" href="lyria_sft/">
-      <div class="card-head">
-        <h3>Lyria SFT — 0.89B generator</h3>
-        <span class="tag">latest checkpoint</span>
-      </div>
-      <p>0.89B decoder, pretrained on piano MIDI, weak-stage SFT on 371K pieces, middle-stage SFT on 51K annotated pieces, then Lyria-stage SFT on 10K prompt-labeled pieces.</p>
+      <p>0.89B decoder pretrained on piano MIDI, then conditional stages on the 371K large-public tier, the 51K curated tier and the 10K high-quality tier.</p>
       <ul class="meta">
         <li><b>Resolution</b> 25 ms, 4,096-token context</li>
-        <li><b>Sentiment encoder</b> Qwen3-Embedding-4B (2560-d)</li>
+        <li><b>Imagery encoder</b> Qwen3-Embedding-4B (2560-d)</li>
         <li><b>Sampling</b> T 0.98 · top-p 0.98</li>
       </ul>
       <span class="open">Open demo →</span>
     </a>
-    <a class="card" href="lyria_sft_cfg3/">
+    <a class="card" href="ar_high_quality_bestof8/">
       <div class="card-head">
-        <h3>Lyria SFT — classifier-free guidance 3.0</h3>
-        <span class="tag">latest checkpoint</span>
+        <h3>TASTE (AR) — best-of-8 by CLaMP 3 selection</h3>
+        <span class="tag">final checkpoint</span>
       </div>
-      <p>Same checkpoint, prompts and seeds as the Lyria SFT page, sampled with logit-space classifier-free guidance (w = 3.0) against the null tags + null imagery branch the model saw during training. For inspecting condition following; guidance also moves the sampled section plan.</p>
-      <ul class="meta">
-        <li><b>Guidance</b> u + 3.0 (c − u), grammar mask after guidance</li>
-        <li><b>Sampling</b> T 0.98 · top-p 0.98, seeds 101–103</li>
-      </ul>
-      <span class="open">Open demo →</span>
-    </a>
-        <a class="card" href="lyria_dpo_r2/">
-      <div class="card-head">
-        <h3>Lyria SFT + CLaMP-DPO round 2 (PQ-gated pairs)</h3>
-        <span class="tag">latest checkpoint</span>
-      </div>
-      <p>One epoch of DPO on 702 CLaMP3 preference pairs (per-prompt best vs worst by sentiment + attribute-prototype score, key/tempo soft penalty on the chosen side, and the rejected piece must have lower Audiobox production quality than the chosen one). Same five prompts and seeds as the Lyria SFT page for a card-by-card comparison.</p>
-      <ul class="meta">
-        <li><b>DPO</b> β 0.1 · lr 5e-7 · 43 steps · reference = Lyria SFT</li>
-        <li><b>Sampling</b> T 0.98 · top-p 0.98, seeds 101–103</li>
-      </ul>
-      <span class="open">Open demo →</span>
-    </a>
-    <a class="card" href="lyria_sft_bestofk/">
-      <div class="card-head">
-        <h3>Lyria SFT — best-of-8 by CLaMP3 selection</h3>
-        <span class="tag">latest checkpoint</span>
-      </div>
-      <p>0.89B generator, Lyria-SFT checkpoint; five prompts, eight samples each, top three shown ranked by the CLaMP3 selection score (text cosine + attribute-prototype cosine).</p>
+      <p>0.89B generator, high-quality-stage checkpoint; five prompts, eight samples each, top three shown ranked by the CLaMP 3 selection score (text cosine + attribute-prototype cosine).</p>
       <ul class="meta">
         <li><b>Resolution</b> 25 ms, 4,096-token context</li>
-        <li><b>Sentiment encoder</b> Qwen3-Embedding-4B (2560-d)</li>
+        <li><b>Imagery encoder</b> Qwen3-Embedding-4B (2560-d)</li>
         <li><b>Sampling</b> T 0.98 · top-p 0.98, best-of-8</li>
       </ul>
       <span class="open">Open demo →</span>
@@ -129,140 +90,79 @@
 
   <h2>Earlier stages</h2>
   <div class="grid">
-    <a class="card" href="middle_sft/">
+    <a class="card" href="ar_curated/">
       <div class="card-head">
-        <h3>Middle SFT — 0.89B generator</h3>
+        <h3>TASTE (AR) — curated stage</h3>
         <span class="tag legacy">earlier stage</span>
       </div>
-      <p>0.89B decoder, pretrained on piano MIDI, weak-stage SFT on 371K pieces, then middle-stage SFT on 51K annotated pieces.</p>
+      <p>0.89B decoder, pretrained on piano MIDI, large-public-stage training on 371K pieces, then curated-stage training on 51K annotated pieces.</p>
       <ul class="meta">
         <li><b>Resolution</b> 25 ms, 4,096-token context</li>
-        <li><b>Sentiment encoder</b> Qwen3-Embedding-4B (2560-d)</li>
+        <li><b>Imagery encoder</b> Qwen3-Embedding-4B (2560-d)</li>
         <li><b>Sampling</b> T 0.98 · top-p 0.98</li>
       </ul>
       <span class="open">Open demo →</span>
     </a>
-    <a class="card" href="weak_sft/">
+    <a class="card" href="ar_large_public/">
       <div class="card-head">
-        <h3>Weak SFT — 0.89B generator</h3>
+        <h3>TASTE (AR) — large-public stage</h3>
         <span class="tag legacy">earlier stage</span>
       </div>
-      <p>0.89B decoder, pretrained on piano MIDI, then weak-stage SFT on 371K weakly-labeled pieces.</p>
+      <p>0.89B decoder, pretrained on piano MIDI, then large-public-stage training on 371K pieces with weakly labelled attributes.</p>
       <ul class="meta">
         <li><b>Resolution</b> 25 ms, 4,096-token context</li>
-        <li><b>Sentiment encoder</b> Qwen3-Embedding-4B (2560-d)</li>
+        <li><b>Imagery encoder</b> Qwen3-Embedding-4B (2560-d)</li>
         <li><b>Sampling</b> T 0.98 · top-p 0.98</li>
       </ul>
       <span class="open">Open demo →</span>
     </a>
-      </div>
+  </div>
 
-  <h2>Latent DiT</h2>
+  <h2>Ablation</h2>
   <div class="grid">
-    <a class="card" href="dit_weak_v1_cond/">
+    <a class="card" href="ar_skip_large_public/">
       <div class="card-head">
-        <h3>Latent DiT — weak stage, conditional samples</h3>
-        <span class="tag">latent DiT</span>
+        <h3>AR — skipping the large-public stage</h3>
+        <span class="tag legacy">ablation</span>
       </div>
-      <p>397.2M-parameter DiT trained for 120K steps on the 371K weak corpus in the window-VAE latent space, generating one 128-d latent per second with rectified flow on a 192 s canvas, then decoded back to MIDI under the token grammar. Same five prompts and seeds as the Middle SFT page; unlike the AR model the DiT takes the section plan and the piece length as a time-aligned input, so each prompt borrows those from a Lyria validation piece with the same emotion and genre.</p>
+      <p>Same architecture and recipe, but the conditional training goes pretrain → curated → high-quality without the large-public stage. Same five prompts and seeds as the high-quality page for a card-by-card comparison.</p>
       <ul class="meta">
-        <li><b>Latent</b> 1 per second, 128-d · 192 s canvas</li>
-        <li><b>Sentiment encoder</b> Qwen3-Embedding-4B (2560-d), cross-attention</li>
-        <li><b>Sampling</b> EMA weights · CFG 3.0 · 50 Euler steps, seeds 101–103</li>
+        <li><b>Resolution</b> 25 ms, 4,096-token context</li>
+        <li><b>Imagery encoder</b> Qwen3-Embedding-4B (2560-d)</li>
+        <li><b>Sampling</b> T 0.98 · top-p 0.98</li>
       </ul>
       <span class="open">Open demo →</span>
     </a>
-    <a class="card" href="dit_weak_v1_cond_cfg1/">
+  </div>
+
+  <h2>TASTE (DiT)</h2>
+  <div class="grid">
+    <a class="card" href="dit_high_quality/">
       <div class="card-head">
-        <h3>Latent DiT — weak stage, no classifier-free guidance</h3>
+        <h3>TASTE (DiT) — high-quality stage, cfg 3.0 vs no guidance</h3>
         <span class="tag">latent DiT</span>
       </div>
-      <p>The same 15 prompt×seed rows as the page above — identical prompts, section plans, lengths, seeds and checkpoint — resampled with classifier-free guidance disabled (cfg 1.0), as an A/B listening comparison of what guidance contributes at the weak stage.</p>
-      <ul class="meta">
-        <li><b>Latent</b> 1 per second, 128-d · 192 s canvas</li>
-        <li><b>Sentiment encoder</b> Qwen3-Embedding-4B (2560-d), cross-attention</li>
-        <li><b>Sampling</b> EMA weights · guidance off (cfg 1.0) · 50 Euler steps, seeds 101–103</li>
-      </ul>
-      <span class="open">Open demo →</span>
-    </a>
-    <a class="card" href="dit_shift_weak_v1_cond/">
-      <div class="card-head">
-        <h3>Latent DiT — weak stage, shifted noise schedule (v2 latents)</h3>
-        <span class="tag">latent DiT</span>
-      </div>
-      <p>The same five prompts and three seeds as the weak-stage page above, sampled from the weak stage of the shifted-schedule arm: pretrained and fine-tuned on the v2 latent store (two 128-d latents per second) with a logit-normal noise schedule shifted toward the low-noise end, three data passes in thirds with the unaugmented pass last, 120K weak steps. Section plans and lengths borrowed from the same Lyria validation pieces.</p>
+      <p>397M DiT over the window-VAE latent space (two 128-d latents per second, 192 s canvas, rectified flow), trained through the same three tiers; samples from the final high-quality stage. The DiT takes the section plan and piece length as time-aligned inputs, so each prompt borrows them from a high-quality validation piece with the same emotion and genre. Each card carries six tabs: three seeds at classifier-free guidance 3.0 and the same seeds with guidance off.</p>
       <ul class="meta">
         <li><b>Latent</b> 2 per second, 128-d · 192 s canvas</li>
-        <li><b>Sentiment encoder</b> Qwen3-Embedding-4B (2560-d), cross-attention</li>
-        <li><b>Sampling</b> EMA weights · CFG 3.0 · 50 Euler steps, seeds 101–103</li>
-      </ul>
-      <span class="open">Open demo →</span>
-    </a>
-    <a class="card" href="dit_shift_middle_v2_cond/">
-      <div class="card-head">
-        <h3>Latent DiT — middle stage, shifted noise schedule</h3>
-        <span class="tag">latent DiT</span>
-      </div>
-      <p>The same 15 prompt×seed rows as the weak-stage page above, sampled from the middle stage of the shifted-schedule arm: 24K steps on the 51K middle corpus followed by a 36K-step continuation, each in three passes in thirds with the unaugmented pass last, initialised from the weak stage. Classifier-free guidance 3.0.</p>
-      <ul class="meta">
-        <li><b>Latent</b> 2 per second, 128-d · 192 s canvas</li>
-        <li><b>Sentiment encoder</b> Qwen3-Embedding-4B (2560-d), cross-attention</li>
-        <li><b>Sampling</b> EMA weights · CFG 3.0 · 50 Euler steps, seeds 101–103</li>
-      </ul>
-      <span class="open">Open demo →</span>
-    </a>
-    <a class="card" href="dit_shift_lyria_v1_cond/">
-      <div class="card-head">
-        <h3>Latent DiT — Lyria stage, shifted noise schedule, cfg 3.0 vs no guidance</h3>
-        <span class="tag">latent DiT</span>
-      </div>
-      <p>The same five prompts and three seeds as the pages above, sampled from the Lyria stage of the shifted-schedule arm (9K steps on the ~10K Lyria corpus in three passes with the unaugmented pass last, initialised from the middle stage). Each card carries six tabs: the three seeds at classifier-free guidance 3.0 and the same three seeds with guidance off (cfg 1.0), for a like-for-like comparison.</p>
-      <ul class="meta">
-        <li><b>Latent</b> 2 per second, 128-d · 192 s canvas</li>
-        <li><b>Sentiment encoder</b> Qwen3-Embedding-4B (2560-d), cross-attention</li>
+        <li><b>Imagery encoder</b> Qwen3-Embedding-4B (2560-d), cross-attention</li>
         <li><b>Sampling</b> EMA weights · CFG 3.0 and 1.0 · 50 Euler steps, seeds 101–103</li>
       </ul>
       <span class="open">Open demo →</span>
     </a>
   </div>
 
-  <h2>Latent tokenizer</h2>
+  <h2>Codec</h2>
   <div class="grid">
-    <a class="card" href="dit_shift_pretrain_v1_uncond/">
+    <a class="card" href="codec_recon/">
       <div class="card-head">
-        <h3>Latent DiT — pretrain stage, shifted noise schedule</h3>
-        <span class="tag">latent DiT</span>
+        <h3>Window VAE reconstruction — 12 pieces, 4 per tier</h3>
+        <span class="tag">codec check</span>
       </div>
-      <p>Six samples from the shifted-schedule pretrain; key, tempo, section plan and length borrowed from pretrain validation pieces; attributes and sentiment null.</p>
-      <ul class="meta">
-        <li><b>Latent</b> 2 per second, 128-d · 192 s canvas</li>
-        <li><b>Conditioning</b> key · tempo · section plan · length (no attributes, no text)</li>
-        <li><b>Sampling</b> EMA weights · guidance 3.0 · 50 Euler steps, seed 101</li>
-      </ul>
-      <span class="open">Open demo →</span>
-    </a>
-    <a class="card" href="dit_pretrain_v1_uncond/">
-      <div class="card-head">
-        <h3>Latent DiT — pretrain stage on the v2 latent store</h3>
-        <span class="tag">latent DiT</span>
-      </div>
-      <p>Six samples from the finished pretrain stage (397.6M, 120K steps, global batch 384) on the new latent store with two 128-d latents per second (0.5 s hop). The pretrain stage is conditioned only on key, tempo, section plan and length, so each sample borrows those from a pretrain validation piece; attributes and sentiment are null. Decoded with parity selection (each second's first half from its own window).</p>
-      <ul class="meta">
-        <li><b>Latent</b> 2 per second, 128-d · 192 s canvas</li>
-        <li><b>Conditioning</b> key · tempo · section plan · length (no attributes, no text)</li>
-        <li><b>Sampling</b> EMA weights · no guidance · 50 Euler steps, seeds 101–106</li>
-      </ul>
-      <span class="open">Open demo →</span>
-    </a>
-    <a class="card" href="vae_recon/">
-      <div class="card-head">
-        <h3>Window VAE reconstruction — 12 pieces, 4 per stage</h3>
-        <span class="tag">latent tokenizer check</span>
-      </div>
-      <p>The collaborator's MuseTok-style window VAE (one 128-d latent per second, 12-layer encoder/decoder) that the planned latent DiT will generate into. Each card plays a piece's original token stream next to its reconstruction from the latents, decoded free-running per 20 s chunk with a token-grammar mask; note F1 0.94 against the original at ±50 ms, velocity 99.6 % and duration 99.3 % agreement.</p>
+      <p>The MuseTok-style window VAE (one 128-d latent per second, 12-layer encoder/decoder) that TASTE (DiT) generates into. Each card plays a piece's original token stream next to its reconstruction from the latents, decoded free-running per 20 s chunk with a token-grammar mask; note F1 0.94 against the original at ±50 ms, velocity 99.6 % and duration 99.3 % agreement.</p>
       <ul class="meta">
         <li><b>Latent</b> 1 per second, 128-d</li>
-        <li><b>Pieces</b> 4 weak · 4 middle · 4 Lyria at note-density quantiles</li>
+        <li><b>Pieces</b> 4 large-public · 4 curated · 4 high-quality at note-density quantiles</li>
         <li><b>Decoding</b> constrained greedy, chunked 20 s</li>
       </ul>
       <span class="open">Open demo →</span>
