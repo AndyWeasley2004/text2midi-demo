@@ -54,7 +54,7 @@
   <p class="lede">
     Piano generators trained on MIDI tokens with a three-tier corpus (large public → curated →
     high-quality) and conditioned on taxonomy attributes, key, tempo, section plan and free-text
-    imagery. Each page is one checkpoint: five hand-written prompts, three random seeds each,
+    imagery. Each AR page shows four hand-written imagery prompts with three random seeds each; the DiT page keeps its five earlier prompts. Each piece is
     rendered to audio with a synced piano-roll.
   </p>
 
@@ -78,7 +78,7 @@
         <h3>TASTE (AR) — best-of-8 by CLaMP 3 selection</h3>
         <span class="tag">final checkpoint</span>
       </div>
-      <p>0.89B generator, high-quality-stage checkpoint; five prompts, eight samples each, top three shown ranked by the CLaMP 3 selection score (text cosine + attribute-prototype cosine).</p>
+      <p>0.89B generator, high-quality-stage checkpoint; four prompts, eight samples each, top three shown ranked by the CLaMP 3 selection score (text cosine + attribute-prototype cosine) minus a key / tempo read-back penalty.</p>
       <ul class="meta">
         <li><b>Resolution</b> 25 ms, 4,096-token context</li>
         <li><b>Imagery encoder</b> Qwen3-Embedding-4B (2560-d)</li>
@@ -125,7 +125,7 @@
         <h3>AR — skipping the large-public stage</h3>
         <span class="tag legacy">ablation</span>
       </div>
-      <p>Same architecture and recipe, but the conditional training goes pretrain → curated → high-quality without the large-public stage. Same five prompts and seeds as the high-quality page for a card-by-card comparison.</p>
+      <p>Same architecture and recipe, but the conditional training goes pretrain → curated → high-quality without the large-public stage. Same four prompts and seeds as the high-quality page for a card-by-card comparison.</p>
       <ul class="meta">
         <li><b>Resolution</b> 25 ms, 4,096-token context</li>
         <li><b>Imagery encoder</b> Qwen3-Embedding-4B (2560-d)</li>

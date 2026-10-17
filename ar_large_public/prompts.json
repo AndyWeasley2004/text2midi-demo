@@ -1,0 +1,10 @@
+[
+  {"emotion": "happy", "genre": "pop", "accompaniment": "arpeggiated", "performance": "steady detached", "key": "G major", "tempo": "fast",
+   "sentiment": "Early morning on a coast road with the windows down, the sea flashing silver between the hills, friends singing along to the radio as the day opens wide ahead of them."},
+  {"emotion": "sad", "genre": "classical", "accompaniment": "sustained", "performance": "flexible connected", "key": "D minor", "tempo": "slow",
+   "sentiment": "On the last evening before the move, a family stands in the emptied house; pale rectangles mark where the pictures hung, and a child touches the doorframe once more before the lights go out."},
+  {"emotion": "anxious", "genre": "jazz", "accompaniment": "contrapuntal", "performance": "flexible detached", "key": "B minor", "tempo": "moderate",
+   "sentiment": "Rain streaks the windows of a late bus crawling through the city; a passenger checks the time again and again, counting the stops, afraid the last train will leave before they reach the station."},
+  {"emotion": "calm", "genre": "classical", "accompaniment": "chordal", "performance": "steady connected", "key": "Bb major", "tempo": "slow",
+   "sentiment": "Snow falls on a mountain monastery at dawn; a single bell sounds across the white courtyard, smoke rises straight from the kitchen chimney, and the whole valley holds its breath in silence."}
+]

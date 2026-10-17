@@ -212,10 +212,6 @@ function renderTabs(view) {
 function selectSeed(view) {
   view.piece = view.prompt.seeds[view.index];
   renderTabs(view);
-  view.subtitle.textContent =
-    `${formatTime(view.piece.duration_sec)} · ${view.piece.notes.length} notes · `
-    + `${view.piece.n_tokens} decoded tokens · plan ${view.piece.plan_windows}`
-    + ` windows (${formatTime(view.piece.plan_sec)})`;
   view.audio.src = view.piece.audio;
   view.midiLink.href = view.piece.midi;
   view.midiLink.textContent = view.piece.midi;
